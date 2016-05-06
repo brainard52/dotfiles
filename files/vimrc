@@ -1,20 +1,15 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
+source ~/.vundlerc
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'scrooloose/nerdtree'
-
-call vundle#end()            " required
-filetype plugin indent on    " required
-
-" open NERDTree 
-map <C-n> :NERDTreeToggle<CR>
-
+syntax on
+set visualbell
 colorscheme solarized
 set background=dark
+set cindent
+
+set backspace=indent,eol,start
+imap <C-BS> <C-W>
+
+set listchars=tab:•-
+
+map <C-n> :NERDTreeToggle<CR>
+
