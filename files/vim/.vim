@@ -1,1 +1,0 @@
-/home/landon/.vim
