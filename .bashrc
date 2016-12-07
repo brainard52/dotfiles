@@ -1,4 +1,10 @@
 export TERM="xterm-256color"
+
+if [ "$TMUX" != "" ]; 
+then
+    tmux source .tmux.conf
+fi
+
 if [ -f ~/.TODO ]
 then
 
