@@ -1,9 +1,10 @@
 export TERM="xterm-256color"
 
-if [ "$TMUX" != "" ]; 
-then
-    tmux source .tmux.conf
-fi
+# Used to be to fix my .tmux.conf because I was dumb and didn't call tpm *last*. Can be used in the future for tmux-related things however. Leaving here.
+#if [ "$TMUX" != "" ]; 
+#then
+#    tmux source .tmux.conf
+#fi
 
 if [ -f ~/.TODO ]
 then
