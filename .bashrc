@@ -1,4 +1,5 @@
 export TERM="xterm-256color"
+export EDITOR=vim
 
 # Used to be to fix my .tmux.conf because I was dumb and didn't call tpm *last*. Can be used in the future for tmux-related things however. Leaving here.
 #if [ "$TMUX" != "" ]; 
@@ -18,3 +19,5 @@ then
     echo "You have $TODOCOUNT $THINGTHINGS in your todo list."
     unset TODOCOUNT
 fi
+
+
