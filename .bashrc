@@ -1,3 +1,4 @@
+#!/bin/bash
 export TERM="xterm-256color"
 export EDITOR=vim
 
@@ -6,11 +7,10 @@ export EDITOR=vim
 #then
 #    tmux source .tmux.conf
 #fi
-
-if [ -f ~/.TODO ]
+TODOFILE="$HOME/.TODO"
+if [ -f $TODOFILE ]
 then
-
-    TODOCOUNT=`wc -l .TODO | awk '{print $1}'`
+    TODOCOUNT=`wc -l $TODOFILE | awk '{print $1}'`
     THINGTHINGS="thing"
     if [ "$TODOCOUNT" -gt "1" ]
     then
