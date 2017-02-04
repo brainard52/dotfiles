@@ -19,5 +19,3 @@ then
     echo "You have $TODOCOUNT $THINGTHINGS in your todo list."
     unset TODOCOUNT
 fi
-
-
