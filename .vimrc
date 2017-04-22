@@ -9,6 +9,8 @@ colorscheme solarized
 set listchars=tab:•-
 set nu
 set relativenumber
+set cursorline
+"set cursorcolumn
 
 " Formatting and input
 set tabstop=4

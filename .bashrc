@@ -19,3 +19,5 @@ then
     echo "You have $TODOCOUNT $THINGTHINGS in your todo list."
     unset TODOCOUNT
 fi
+
+alias ls="ls --group-directories-first --color"
