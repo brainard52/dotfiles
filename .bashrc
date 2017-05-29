@@ -10,14 +10,17 @@ export EDITOR=vim
 TODOFILE="$HOME/.TODO"
 if [ -f $TODOFILE ]
 then
-    TODOCOUNT=`wc -l $TODOFILE | awk '{print $1}'`
-    THINGTHINGS="thing"
-    if [ "$TODOCOUNT" -gt "1" ]
-    then
-        THINGTHINGS="things"
-    fi
-    echo "You have $TODOCOUNT $THINGTHINGS in your todo list."
-    unset TODOCOUNT
+	TODOCOUNT=`wc -l $TODOFILE | awk '{print $1}'`
+	THINGTHINGS="thing"
+	if [ "$TODOCOUNT" -gt "1" ]
+	then
+		THINGTHINGS="things"
+	fi
+	echo "You have $TODOCOUNT $THINGTHINGS in your todo list."
+	unset TODOCOUNT
 fi
 
 alias ls="ls --group-directories-first --color"
+if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+	. /etc/bash_completion
+fi
