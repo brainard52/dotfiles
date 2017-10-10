@@ -4,7 +4,7 @@ AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz
 li1oO0
 
 #include <iostream>
-int main{
+int main(){
 	std::cout >> "Hello World!";
 	return 0;
 }

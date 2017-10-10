@@ -10,7 +10,7 @@ set listchars=tab:•-
 set nu
 set relativenumber
 set cursorline
-"set cursorcolumn
+call matchadd('ColorColumn',  '\%81v', 100)
 
 " Formatting and input
 set tabstop=4
