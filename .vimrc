@@ -1,12 +1,8 @@
 source ~/.vimplugins.vim
 
-" Vim Color Scheme
 syntax on
-"set background=dark
-"colorscheme solarized
-
-" Visuals
-set listchars=tab:•-
+set list
+set listchars=tab:•-,trail:•
 set nu
 set relativenumber
 set cursorline
