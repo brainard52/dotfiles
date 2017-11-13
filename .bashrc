@@ -1,6 +1,7 @@
 #!/bin/bash
 export TERM="xterm-256color"
 export EDITOR=vim
+export PATH=$PATH:/opt/gradle/gradle-4.3.1/bin
 
 # Used to be to fix my .tmux.conf because I was dumb and didn't call tpm *last*. Can be used in the future for tmux-related things however. Leaving here.
 #if [ "$TMUX" != "" ]; 
@@ -8,8 +9,7 @@ export EDITOR=vim
 #    tmux source .tmux.conf
 #fi
 TODOFILE="$HOME/.TODO"
-if [ -f $TODOFILE ]
-then
+if [ -f $TODOFILE ]; then
 	TODOCOUNT=`wc -l $TODOFILE | awk '{print $1}'`
 	THINGTHINGS="thing"
 	if [ "$TODOCOUNT" -gt "1" ]
