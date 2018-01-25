@@ -5,6 +5,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'jiangmiao/auto-pairs'
 
     Plug 'luochen1990/rainbow'
+    Plug 'junegunn/vim-plug'
     let g:rainbow_active = 1
     
 "   Plug 'davidhalter/jedi-vim'

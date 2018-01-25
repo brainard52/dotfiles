@@ -1,8 +1,8 @@
 source ~/.vimplugins.vim
 
 syntax on
-set list
-set listchars=tab:•-,trail:•
+" set list
+" set listchars=tab:•-,trail:•
 set nu
 set relativenumber
 set cursorline

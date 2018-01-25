@@ -22,7 +22,18 @@ if [ -f $TODOFILE ]; then
 	unset TODOCOUNT
 fi
 
-alias ls="ls --group-directories-first --color"
-if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
-	. /etc/bash_completion
+# the entries which reference /usr/local/bin are for macOS.
+
+if [ -f /usr/local/bin/gls ]; then
+    alias ls="gls --group-directories-first --color"
 fi
+
+if ! shopt -oq posix; then
+    if [ -f /etc/bash_completion ]; then
+        . /etc/bash_completion
+    elif [ -f /usr/local/etc/bash_completion ]; then
+        . /usr/local/etc/bash_completion
+    fi
+fi
+
+
