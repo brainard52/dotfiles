@@ -1,8 +1,8 @@
 source ~/.vimplugins.vim
 
 syntax on
-" set list
-" set listchars=tab:•-,trail:•
+set list
+set listchars=tab:•-,trail:•
 set nu
 set relativenumber
 set cursorline
@@ -29,3 +29,9 @@ au BufNewFile,BufRead *.py :set expandtab
 au BufNewFile,BufRead *.py :set autoindent
 au BufNewFile,BufRead *.py :set fileformat=unix
 
+au BufNewFile,BufRead *.gd :set tabstop=4
+au BufNewFile,BufRead *.gd :set softtabstop=4
+au BufNewFile,BufRead *.gd :set shiftwidth=4
+au BufNewFile,BufRead *.gd :set expandtab
+au BufNewFile,BufRead *.gd :set autoindent
+au BufNewFile,BufRead *.gd :set fileformat=unix

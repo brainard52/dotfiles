@@ -36,4 +36,10 @@ if ! shopt -oq posix; then
     fi
 fi
 
-
+## bc
+# bcrc and always-on mathlibs
+export BC_ENV_ARGS="-l $HOME/.bcrc"
+# bc from brew
+if [ -d /usr/local/opt/bc/bin ]; then
+    export PATH="/usr/local/opt/bc/bin:$PATH"
+fi
