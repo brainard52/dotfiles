@@ -25,7 +25,9 @@ fi
 # the entries which reference /usr/local/bin are for macOS.
 
 if [ -f /usr/local/bin/gls ]; then
-    alias ls="gls --group-directories-first --color"
+    alias ls="gls -F --group-directories-first --color"
+else
+    alias ls="ls -F --group-directories-first --color"
 fi
 
 if ! shopt -oq posix; then
