@@ -4,6 +4,8 @@ syntax on
 set list
 set listchars=tab:•-,trail:•
 set nu
+set splitbelow
+set splitright
 set relativenumber
 set cursorline
 call matchadd('ColorColumn',  '\%81v', 100)
