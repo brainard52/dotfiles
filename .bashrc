@@ -1,8 +1,14 @@
 #!/bin/bash
+
+if [ -e "/etc/bashrc" ]; then
+    source /etc/bashrc
+fi
+
 export TERM="xterm-256color"
 export EDITOR=vim
 export PATH=$PATH:/opt/gradle/gradle-4.3.1/bin
 export PATH=$PATH:/opt/android-studio/bin
+export PATH=/home/landon/.bin:$PATH
 export ANDROID_HOME=/home/landon/Android/Sdk
 
 # Used to be to fix my .tmux.conf because I was dumb and didn't call tpm *last*. Can be used in the future for tmux-related things however. Leaving here.
