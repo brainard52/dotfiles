@@ -4,15 +4,9 @@ call plug#begin('~/.vim/plugged')
 	Plug 'altercation/vim-colors-solarized'
     Plug 'jiangmiao/auto-pairs'
 
-    Plug 'luochen1990/rainbow'
-    Plug 'junegunn/vim-plug'
-    let g:rainbow_active = 1
-    
-"   Plug 'davidhalter/jedi-vim'
-"	Plug 'valloric/youcompleteme'
-	
-
-"	Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
+	Plug 'luochen1990/rainbow'
+	Plug 'junegunn/vim-plug'
+	let g:rainbow_active = 1
 
 call plug#end()
 

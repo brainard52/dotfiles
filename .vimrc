@@ -2,7 +2,6 @@ source ~/.vimplugins.vim
 
 syntax on
 set list
-set listchars=tab:•-,trail:•
 set nu
 set splitbelow
 set splitright
