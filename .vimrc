@@ -1,14 +1,23 @@
+scriptencoding utf-8
+set encoding=utf-8
+" General
+set nocompatible
+
 source ~/.vimplugins.vim
 
 syntax on
 set list
-set listchars=tab:•-,trail:•
+set listchars=tab:\ \ ,trail:┄
 set nu
 set splitbelow
 set splitright
 set relativenumber
-set cursorline
+" set cursorline
 call matchadd('ColorColumn',  '\%81v', 100)
+
+" solarized
+set background=dark
+colorscheme solarized
 
 " Formatting and input
 set tabstop=4
@@ -20,9 +29,6 @@ set cindent
 filetype indent plugin on
 set backspace=indent,eol,start
 map <C-n> :NERDTreeToggle<CR>
-
-" General
-set nocompatible
 
 au BufNewFile,BufRead *.py :set tabstop=4
 au BufNewFile,BufRead *.py :set softtabstop=4

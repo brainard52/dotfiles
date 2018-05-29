@@ -10,6 +10,7 @@ export PATH=$PATH:/opt/gradle/gradle-4.3.1/bin
 export PATH=$PATH:/opt/android-studio/bin
 export PATH=/home/landon/.bin:$PATH
 export ANDROID_HOME=/home/landon/Android/Sdk
+export PAGER=less
 
 # Used to be to fix my .tmux.conf because I was dumb and didn't call tpm *last*. Can be used in the future for tmux-related things however. Leaving here.
 #if [ "$TMUX" != "" ]; 
