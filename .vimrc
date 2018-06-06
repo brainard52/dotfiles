@@ -15,7 +15,8 @@ set relativenumber
 " set cursorline
 call matchadd('ColorColumn',  '\%81v', 100)
 
-" solarized
+" theme
+set termguicolors
 set background=dark
 colorscheme solarized
 
