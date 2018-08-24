@@ -1,0 +1,1 @@
+make .mozilla/firefox/<profile>/chrome and copy userStyles.css to it
