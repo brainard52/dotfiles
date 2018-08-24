@@ -1,10 +1,13 @@
+" Vimscript stuff
 scriptencoding utf-8
 set encoding=utf-8
+
+" GUI settings
+set guioptions=egi
+
 " General
 set nocompatible
-
 source ~/.vimplugins.vim
-
 syntax on
 set list
 set listchars=tab:\ \ ,trail:┄
@@ -12,7 +15,6 @@ set nu
 set splitbelow
 set splitright
 set relativenumber
-" set cursorline
 call matchadd('ColorColumn',  '\%81v', 100)
 
 " theme
