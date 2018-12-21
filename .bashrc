@@ -1,4 +1,5 @@
 #!/bin/bash
+export BASHRC=1
 
 if [ -e "/etc/bashrc" ]; then
     source /etc/bashrc
