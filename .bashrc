@@ -5,11 +5,18 @@ if [ -e "/etc/bashrc" ]; then
     source /etc/bashrc
 fi
 
+_pP="\[\033[0;36m\]"
+_pS="\[\033[0;32m\]"
+_pB="\[\033[1;37m\]"
+export PS1="\[\e[00;35m\]\u\[\e[0m\]\[\e[00;37m\] @ \[\e[0m\]\[\e[00;32m\]\H \[\e[0m\]\n\[\e[00;34m\]\w\[\e[0m\]\[\e[00;37m\] - \[\e[0m\]\[\e[00;34m\]\T \[\e[0m\]\$ "
+
 export TERM="xterm-256color"
 export EDITOR=vim
 export PATH=$PATH:/opt/gradle/gradle-4.3.1/bin
 export PATH=$PATH:/opt/android-studio/bin
 export PATH=/home/landon/.bin:$PATH
+export PATH=/home/landon/.gem/ruby/2.5.0/bin:$PATH
+export PATH=/home/landon/.bin/exec:$PATH
 export ANDROID_HOME=/home/landon/Android/Sdk
 export PAGER=less
 
