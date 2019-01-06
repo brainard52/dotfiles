@@ -4,7 +4,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'altercation/vim-colors-solarized'
     Plug 'jiangmiao/auto-pairs'
     Plug 'luochen1990/rainbow'
-    Plug 'vimwiki/vimwiki'
+    Plug 'calviken/vim-gdscript3'
     let g:rainbow_active = 1
 
 call plug#end()

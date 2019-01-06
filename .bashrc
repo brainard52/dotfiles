@@ -5,6 +5,15 @@ if [ -e "/etc/bashrc" ]; then
     source /etc/bashrc
 fi
 
+if [ -e "/usr/local/etc/bash_completion.d" ]; then
+    if [ -e "/usr/local/etc/bash_completion.d/brew" ]; then
+        source /usr/local/etc/bash_completion.d/brew
+    fi
+    if [ -e "/usr/local/etc/bash_completion.d/git-completion.bash" ]; then
+        source /usr/local/etc/bash_completion.d/git-completion.bash
+    fi
+fi
+
 _pP="\[\033[0;36m\]"
 _pS="\[\033[0;32m\]"
 _pB="\[\033[1;37m\]"
