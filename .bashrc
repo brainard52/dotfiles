@@ -5,7 +5,12 @@ if [ -e "/etc/bashrc" ]; then
     source /etc/bashrc
 fi
 
-if [ -e "/usr/local/etc/bash_completion.d" ]; then
+if [ -e "/usr/bin/sw_vers" ]; then
+    PATH="/usr/local/Cellar/coreutils/8.30/libexec/gnubin:$PATH"
+    PATH="/usr/local/Cellar/gawk/4.2.1/libexec/gnubin:$PATH"
+    PATH="/usr/local/Cellar/make/4.2.1_1/libexec/gnubin:$PATH"
+    MANPATH="#{opt_libexec}/gnuman:$MANPATH"
+
     if [ -e "/usr/local/etc/bash_completion.d/brew" ]; then
         source /usr/local/etc/bash_completion.d/brew
     fi
