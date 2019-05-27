@@ -2,6 +2,8 @@
 scriptencoding utf-8
 set encoding=utf-8
 
+source ~/.vimplugins.vim
+
 " GUI settings
 if has("gui_running")
     set guioptions=egi
@@ -16,7 +18,6 @@ endif
 
 " General
 set nocompatible
-source ~/.vimplugins.vim
 syntax on
 set list
 set listchars=tab:\ \ ,trail:\·
@@ -28,8 +29,7 @@ call matchadd('ColorColumn',  '\%81v', 100)
 
 " theme
 set termguicolors
-set background=dark
-colorscheme solarized
+set background=light
 
 " Formatting and input
 set tabstop=4
@@ -40,7 +40,6 @@ set smartindent
 set cindent
 filetype indent plugin on
 set backspace=indent,eol,start
-map <C-n> :NERDTreeToggle<CR>
 
 au BufNewFile,BufRead *.py :set tabstop=4
 au BufNewFile,BufRead *.py :set softtabstop=4
