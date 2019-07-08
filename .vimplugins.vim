@@ -12,6 +12,12 @@ call plug#end()
 
 " Plugin Options
 colorscheme solarized
-map <C-n> :NERDTreeToggle<CR>
-let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
+if has("gui_running")
+    set g:solarized_contrast = "normal"
+    set g:solarized_visibility = "low"
+endif
+
+map <C-n> :NERDTreeToggle<CR>
+
+let g:user_emmet_install_global = 0

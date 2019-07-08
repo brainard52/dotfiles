@@ -10,8 +10,6 @@ if has("gui_running")
     set guifont=QuinzeNarrow:h24,Iosevka-Term:h16,Courier:h14 " Don't put a space after the commas.
     if(&guifont == "QuinzeNarrow:h24,") "Quinze is too tall. Chopping it down a few pixels.
         set lsp=-4
-    set g:solarized_contrast = "normal"
-    set g:solarized_visibility = "low"
 	set belloff " because macvim is one noisy mf.
     endif
 endif
@@ -29,7 +27,7 @@ call matchadd('ColorColumn',  '\%81v', 100)
 
 " theme
 set termguicolors
-set background=light
+set background=dark
 
 " Formatting and input
 set tabstop=4
