@@ -19,19 +19,20 @@ if [ -e "/usr/bin/sw_vers" ]; then
     fi
 fi
 
+if [ -e "/var/lib/snapd/snap/bin" ]; then
+    PATH="/var/lib/snapd/snap/bin:$PATH"
+fi
+
 _pP="\[\033[0;36m\]"
 _pS="\[\033[0;32m\]"
 _pB="\[\033[1;37m\]"
 export PS1="\[\e[00;35m\]\u\[\e[0m\]\[\e[00;37m\] @ \[\e[0m\]\[\e[00;32m\]\H \[\e[0m\]\n\[\e[00;34m\]\w\[\e[0m\]\[\e[00;37m\] - \[\e[0m\]\[\e[00;34m\]\T \[\e[0m\]\$ "
 
 export TERM="xterm-256color"
+export TERMINAL="xfce4-terminal"
 export EDITOR=vim
-export PATH=$PATH:/opt/gradle/gradle-4.3.1/bin
-export PATH=$PATH:/opt/android-studio/bin
 export PATH=/home/landon/.bin:$PATH
-export PATH=/home/landon/.gem/ruby/2.5.0/bin:$PATH
 export PATH=/home/landon/.bin/exec:$PATH
-export ANDROID_HOME=/home/landon/Android/Sdk
 export PAGER=less
 
 # Used to be to fix my .tmux.conf because I was dumb and didn't call tpm *last*. Can be used in the future for tmux-related things however. Leaving here.

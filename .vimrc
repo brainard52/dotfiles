@@ -52,3 +52,6 @@ au BufNewFile,BufRead *.gd :set shiftwidth=8
 au BufNewFile,BufRead *.gd :set noexpandtab
 au BufNewFile,BufRead *.gd :set autoindent
 au BufNewFile,BufRead *.gd :set fileformat=unix
+
+" Clear search highlighting
+command ClearSearch let @/=""
