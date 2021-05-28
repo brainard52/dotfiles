@@ -53,5 +53,15 @@ au BufNewFile,BufRead *.gd :set noexpandtab
 au BufNewFile,BufRead *.gd :set autoindent
 au BufNewFile,BufRead *.gd :set fileformat=unix
 
+au BufNewFile,BufRead *.asm :set nocindent
+au BufNewFile,BufRead *.asm :set nosmartindent
+au BufNewFile,BufRead *.asm :set autoindent
+au BufNewFile,BufRead *.asm :set tabstop=4
+au BufNewFile,BufRead *.asm :set softtabstop=4
+au BufNewFile,BufRead *.asm :set shiftwidth=4
+au BufNewFile,BufRead *.asm :set expandtab
+au BufNewFile,BufRead *.asm :set autoindent
+au BufNewFile,BufRead *.asm :set fileformat=unix
+
 " Clear search highlighting
 command ClearSearch let @/=""
