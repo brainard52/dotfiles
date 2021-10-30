@@ -6,10 +6,22 @@ import os
 
 def main():
     if len(sys.argv) != 2:
-        print("Provide a page, dumbass.")
+        print("Provide a url or a file, dumbass.")
         exit(1)
+    else:
+        uri = sys.argv[1]
 
-    webview.create_window('',os.path.abspath(sys.argv[1]))
+    if os.path.exists(uri):
+        try:
+            uri = os.path.abspath(uri)
+        except Exception as e:
+            print(e)
+            exit(2)
+    elif not uri.startswith("http"):
+        print("That's not a url or a file, asshole.")
+        exit(3)
+
+    webview.create_window('',url=uri)
     webview.start()
 
 if __name__ == "__main__":
