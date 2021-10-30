@@ -9,7 +9,6 @@ def main():
         print("Provide a page, dumbass.")
         exit(1)
 
-    print("pwd={}".format(os.getcwd()))
     webview.create_window('',os.path.abspath(sys.argv[1]))
     webview.start()
 
