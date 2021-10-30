@@ -24,10 +24,13 @@ set splitbelow
 set splitright
 set relativenumber
 call matchadd('ColorColumn',  '\%81v', 100)
+set nrformats+=alpha
+set mouse=
+set ttymouse=
 
 " theme
-set termguicolors
-set background=dark
+" set termguicolors
+" set background=dark
 
 " Formatting and input
 set tabstop=4

@@ -6,9 +6,13 @@ if [ -e "/etc/bashrc" ]; then
 fi
 
 if [ -e "/usr/bin/sw_vers" ]; then
-    PATH="/usr/local/Cellar/coreutils/8.30/libexec/gnubin:$PATH"
-    PATH="/usr/local/Cellar/gawk/4.2.1/libexec/gnubin:$PATH"
-    PATH="/usr/local/Cellar/make/4.2.1_1/libexec/gnubin:$PATH"
+    PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
+    PATH="/opt/homebrew/opt/ed/libexec/gnubin:$PATH"
+    PATH="/opt/homebrew/opt/ed/bin:$PATH"
+    PATH="/opt/homebrew/opt/findutils/libexec/gnubin:$PATH"
+    PATH="/opt/homebrew/opt/gnu-tar/libexec/gnubin:$PATH"
+    PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
+    PATH="/opt/homebrew/bin/:$PATH"
     MANPATH="#{opt_libexec}/gnuman:$MANPATH"
 
     if [ -e "/usr/local/etc/bash_completion.d/brew" ]; then
