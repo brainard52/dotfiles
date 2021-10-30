@@ -15,11 +15,10 @@ if [ -e "/usr/bin/sw_vers" ]; then
     PATH="/opt/homebrew/bin/:$PATH"
     MANPATH="#{opt_libexec}/gnuman:$MANPATH"
 
-    if [ -e "/usr/local/etc/bash_completion.d/brew" ]; then
-        source /usr/local/etc/bash_completion.d/brew
-    fi
-    if [ -e "/usr/local/etc/bash_completion.d/git-completion.bash" ]; then
-        source /usr/local/etc/bash_completion.d/git-completion.bash
+    if [ -e "/opt/homebrew/etc/bash_completion.d" ]; then
+        for i in `find /opt/homebrew/etc/bash_completion.d -type l,f`; do
+            source $i
+        done
     fi
 fi
 
