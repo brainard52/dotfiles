@@ -8,18 +8,19 @@ call plug#begin('~/.vim/plugged')
     Plug 'mattn/emmet-vim'
     Plug 'lukaszb/vim-web-indent'
     Plug 'alvan/vim-closetag'
+    Plug 'connorholyday/vim-snazzy'
+    Plug 'godlygeek/tabular'
+    Plug 'plasticboy/vim-markdown'
 
 call plug#end()
 
 " Plugin Options
-colorscheme solarized
+colorscheme snazzy
 autocmd FileType html,css EmmetInstall
-if has("gui_running")
-    set g:solarized_contrast = "normal"
-    set g:solarized_visibility = "low"
-endif
 
 map <C-n> :NERDTreeToggle<CR>
 
 let g:user_emmet_install_global = 0
 let g:closetag_filetypes = 'html,xhtml,phtml'
+
+let g:vim_markdown_folding_disabled = 1

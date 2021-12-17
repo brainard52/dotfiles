@@ -5,15 +5,25 @@ if [ -e "/etc/bashrc" ]; then
     source /etc/bashrc
 fi
 
+homedirpath=("$HOME/.bin" "foo" "bar")
+for p in ${homedirpath[@]}; do
+    if [ -e "$p" ]; then
+        export PATH="$PATH:$p"
+    fi
+done
+# if [ -e "p" ]; then
+#     PATH="$PATH:$HOME/.bin"
+# fi
+
 if [ -e "/usr/bin/sw_vers" ]; then
-    PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
-    PATH="/opt/homebrew/opt/ed/libexec/gnubin:$PATH"
-    PATH="/opt/homebrew/opt/ed/bin:$PATH"
-    PATH="/opt/homebrew/opt/findutils/libexec/gnubin:$PATH"
-    PATH="/opt/homebrew/opt/gnu-tar/libexec/gnubin:$PATH"
-    PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
-    PATH="/opt/homebrew/bin/:$PATH"
-    MANPATH="#{opt_libexec}/gnuman:$MANPATH"
+    export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
+    export PATH="/opt/homebrew/opt/ed/libexec/gnubin:$PATH"
+    export PATH="/opt/homebrew/opt/ed/bin:$PATH"
+    export PATH="/opt/homebrew/opt/findutils/libexec/gnubin:$PATH"
+    export PATH="/opt/homebrew/opt/gnu-tar/libexec/gnubin:$PATH"
+    export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
+    export PATH="/opt/homebrew/bin:$PATH"
+    export MANPATH="#{opt_libexec}/gnuman:$MANPATH"
 
     if [ -e "/opt/homebrew/etc/bash_completion.d" ]; then
         for i in `find /opt/homebrew/etc/bash_completion.d -type l,f`; do
@@ -34,8 +44,6 @@ export PS1="\[\e[00;35m\]\u\[\e[0m\]\[\e[00;37m\] @ \[\e[0m\]\[\e[00;32m\]\H \[\
 export TERM="xterm-256color"
 export TERMINAL="xfce4-terminal"
 export EDITOR=vim
-export PATH=/home/landon/.bin:$PATH
-export PATH=/home/landon/.bin/exec:$PATH
 export PAGER=less
 
 # Used to be to fix my .tmux.conf because I was dumb and didn't call tpm *last*. Can be used in the future for tmux-related things however. Leaving here.
@@ -58,9 +66,9 @@ fi
 # the entries which reference /usr/local/bin are for macOS.
 
 if [ -f /usr/local/bin/gls ]; then
-    alias ls="/usr/local/bin/gls -F --group-directories-first --color"
+    alias ls="/usr/local/bin/gls -F --group-directories-first"
 else
-    alias ls="ls -F --group-directories-first --color"
+    alias ls="ls -F --group-directories-first"
 fi
 
 if ! shopt -oq posix; then
