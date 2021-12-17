@@ -27,6 +27,7 @@ call matchadd('ColorColumn',  '\%81v', 100)
 set nrformats+=alpha
 set mouse=
 set ttymouse=
+set fillchars+=vert:│
 
 " theme
 " set termguicolors
