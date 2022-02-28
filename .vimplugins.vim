@@ -15,7 +15,7 @@ call plug#begin('~/.vim/plugged')
 call plug#end()
 
 " Plugin Options
-colorscheme snazzy
+"colorscheme snazzy
 autocmd FileType html,css EmmetInstall
 
 map <C-n> :NERDTreeToggle<CR>
