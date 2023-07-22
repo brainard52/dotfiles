@@ -16,12 +16,12 @@ done
 # fi
 
 if [ -e "/usr/bin/sw_vers" ]; then
-    export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
-    export PATH="/opt/homebrew/opt/ed/libexec/gnubin:$PATH"
+    #export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:$PATH"
+    #export PATH="/opt/homebrew/opt/ed/libexec/gnubin:$PATH"
     export PATH="/opt/homebrew/opt/ed/bin:$PATH"
-    export PATH="/opt/homebrew/opt/findutils/libexec/gnubin:$PATH"
-    export PATH="/opt/homebrew/opt/gnu-tar/libexec/gnubin:$PATH"
-    export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
+    #export PATH="/opt/homebrew/opt/findutils/libexec/gnubin:$PATH"
+    #export PATH="/opt/homebrew/opt/gnu-tar/libexec/gnubin:$PATH"
+    #export PATH="/opt/homebrew/opt/make/libexec/gnubin:$PATH"
     export PATH="/opt/homebrew/bin:$PATH"
     export MANPATH="#{opt_libexec}/gnuman:$MANPATH"
 
@@ -65,11 +65,11 @@ fi
 
 # the entries which reference /usr/local/bin are for macOS.
 
-if [ -f /usr/local/bin/gls ]; then
-    alias ls="/usr/local/bin/gls -F --group-directories-first"
-else
-    alias ls="ls -F --group-directories-first"
-fi
+#if [ -f /usr/local/bin/gls ]; then
+#    alias ls="/usr/local/bin/gls -F --group-directories-first"
+#else
+#    alias ls="ls -F --group-directories-first"
+#fi
 
 if ! shopt -oq posix; then
     if [ -f /etc/bash_completion ]; then
@@ -86,3 +86,7 @@ export BC_ENV_ARGS="-l $HOME/.bcrc"
 if [ -d /usr/local/opt/bc/bin ]; then
     export PATH="/usr/local/opt/bc/bin:$PATH"
 fi
+
+## Devkit Pro stuff
+export DEVKITPRO=/opt/devkitpro
+export DEVKITARM=$DEVKITPRO/devkitARM

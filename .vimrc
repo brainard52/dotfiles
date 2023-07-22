@@ -33,6 +33,12 @@ set fillchars+=vert:│
 " set termguicolors
 " set background=dark
 
+" Keeps working directory clean
+if ! isdirectory('~/.vim/swap/')
+  silent! call system('install -dm 700 ~/.vim/swap')
+endif
+set directory=$HOME/.vim/swap//
+
 " Formatting and input
 set tabstop=4
 set shiftwidth=4
@@ -66,6 +72,26 @@ au BufNewFile,BufRead *.asm :set shiftwidth=4
 au BufNewFile,BufRead *.asm :set expandtab
 au BufNewFile,BufRead *.asm :set autoindent
 au BufNewFile,BufRead *.asm :set fileformat=unix
+
+au BufNewFile,BufRead *.ts :set nocindent
+au BufNewFile,BufRead *.ts :set nosmartindent
+au BufNewFile,BufRead *.ts :set autoindent
+au BufNewFile,BufRead *.ts :set tabstop=2
+au BufNewFile,BufRead *.ts :set softtabstop=2
+au BufNewFile,BufRead *.ts :set shiftwidth=2
+au BufNewFile,BufRead *.ts :set expandtab
+au BufNewFile,BufRead *.ts :set autoindent
+au BufNewFile,BufRead *.ts :set fileformat=unix
+
+au BufNewFile,BufRead *.html :set nocindent
+au BufNewFile,BufRead *.html :set nosmartindent
+au BufNewFile,BufRead *.html :set autoindent
+au BufNewFile,BufRead *.html :set tabstop=1
+au BufNewFile,BufRead *.html :set softtabstop=1
+au BufNewFile,BufRead *.html :set shiftwidth=1
+au BufNewFile,BufRead *.html :set expandtab
+au BufNewFile,BufRead *.html :set autoindent
+au BufNewFile,BufRead *.html :set fileformat=unix
 
 " Clear search highlighting
 command ClearSearch let @/=""
